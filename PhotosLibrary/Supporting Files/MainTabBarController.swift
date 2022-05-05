@@ -16,10 +16,11 @@ final class MainTabBarController: UITabBarController {
         tabBar.isTranslucent = false
       
         let photosVC = PhotosCollectionViewController(collectionViewLayout: UICollectionViewFlowLayout())
+        let likesVC = LikesCollectionViewController(collectionViewLayout: UICollectionViewFlowLayout())
 
         viewControllers = [
             generateNavigationController(rootViewController: photosVC, title: "Photos", image: "photo.on.rectangle.angled"),
-            generateNavigationController(rootViewController: ViewController(), title: "Favourites", image: "suit.heart.fill")
+            generateNavigationController(rootViewController: likesVC, title: "Favourites", image: "suit.heart.fill")
         ]
     }
 
